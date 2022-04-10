@@ -26,8 +26,8 @@ namespace Pierres.Controllers
     {
       var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
       var currentUser = await _userManager.FindByIdAsync(userId);
-      var userRecipes = _db.Treats.Where(entry => entry.User.Id == currentUser.Id).ToList();
-      return View(userRecipes);
+      var userTreats = _db.Treats.Where(entry => entry.User.Id == currentUser.Id).ToList();
+      return View(userTreats);
     }
     public ActionResult Create()
     {
@@ -85,7 +85,7 @@ namespace Pierres.Controllers
     }
 
     [HttpPost]
-    public ActionResult AddTag(Treat treat, int FlavorId)
+    public ActionResult AddFlavor(Treat treat, int FlavorId)
     {
       if (FlavorId != 0)
       {
