@@ -1,5 +1,5 @@
 # **Pierre's Treats**
-#### _a C# MVC Factory application._
+#### _a C# MVC Bakery application._
 
 #### by **Ebru Rice**
 #### April 10, 2022
