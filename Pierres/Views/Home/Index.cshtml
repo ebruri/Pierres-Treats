@@ -1,0 +1,25 @@
+@{
+  Layout = "_Layout";
+}
+
+@using Pierres.Models;
+
+<div class="container-fluid">
+  <div class="d-flex justify-content-center"> 
+    <h1 id="title" style="font-size:10vw">PIERRE'S TREATS</h1>
+  </div>
+  <p>@Html.ActionLink("Create an account", "Index", "Account",  null, new { id = "OT",style = "color: rgb(236, 54, 197);" })</p>
+
+  @foreach (Treat treat in Model)
+  {
+    <p>@Html.ActionLink($"{treat.Name}", "Details", "Recipes", new { id = treat.TreatId }, new { @class = "header" })</p>  
+  }
+
+  @foreach (Treat treat in Model)
+    {
+      @foreach(var join in treat.JoinEntities)
+        {
+          <p> @Html.ActionLink($"{join.Flavor.Name}  ", "Details", "Tags", new { id = join.Flavor.FlavorId }, new { @class = "header" })</p>
+        } 
+    }
+</div>
