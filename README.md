@@ -14,7 +14,7 @@
 
 
 ## Description
-A website where users can add, view, edit and delete treats and flavours for a bakery.
+A website where users can add, view, edit and delete treats and flavors for a bakery.
 
 ## Project Setup/Installation Instructions
 
