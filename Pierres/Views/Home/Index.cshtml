@@ -11,14 +11,14 @@
 
   @foreach (Treat treat in Model)
   {
-    <p>@Html.ActionLink($"{treat.Name}", "Details", "Recipes", new { id = treat.TreatId }, new { @class = "header" })</p>  
+    <p>@Html.ActionLink($"{treat.Name}", "Details", "Treats", new { id = treat.TreatId }, new { @class = "header" })</p>  
   }
 
   @foreach (Treat treat in Model)
     {
       @foreach(var join in treat.JoinEntities)
         {
-          <p> @Html.ActionLink($"{join.Flavor.Name}  ", "Details", "Tags", new { id = join.Flavor.FlavorId }, new { @class = "header" })</p>
+          <p> @Html.ActionLink($"{join.Flavor.Name}  ", "Details", "Flavors", new { id = join.Flavor.FlavorId }, new { @class = "header" })</p>
         } 
     }
 </div>

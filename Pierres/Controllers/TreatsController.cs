@@ -111,7 +111,7 @@ namespace Pierres.Controllers
     }
 
     [HttpPost]
-    public ActionResult DeleteTag(int joinId)
+    public ActionResult DeleteFlavor(int joinId)
     {
       var joinEntry = _db.FlavorTreats.FirstOrDefault(entry => entry.FlavorTreatId == joinId);
       _db.FlavorTreats.Remove(joinEntry);
